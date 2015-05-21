@@ -862,7 +862,7 @@ li { list-style: none;}
     display: inline-block;
     float: none;
     list-style: none outside none;
-    margin: 0 23px 0 0;
+   margin: 0 23px 0 0;
     text-align: center;
     width: auto;
 }
@@ -2065,7 +2065,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 .products-grid.last { border-bottom:0; }
 .products-grid .product-image {}
 .products-grid .product-image img { max-width: 100%; height: auto;}
-.products-grid .price-box { margin:3px 0; float: left; }
+.products-grid .price-box { margin:3px 0; /*float: left;*/ }
 .products-grid .availability { line-height:21px; }
 .products-grid .ratings { float: right; margin: 12px 0 0;}
 .products-grid .product-name {
@@ -2074,8 +2074,13 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-align:center;
 }
-.products-grid .item { float: left; text-align: center; margin-bottom: 10px; }
+.col-main .widget-viewed .products-grid li {
+    border:1px solid #ccc;
+}
+.products-grid .item { float: left; text-align: center; margin-bottom: 10px;}
+.col-main .widget-viewed .widget-products .products-grid .item { float: left; text-align: center; margin-bottom: 10px;width:24%;margin-right:1%; }
 .products-grid .item .item-inner {
     position: relative;
 }
@@ -2348,7 +2353,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 /********** < Product Prices */
 .price { white-space:nowrap !important; }
 
-.price-box { margin:5px 0; float: left; display: inline-block; }
+.price-box { margin:5px 0; /*float: left;*/ display: inline-block; }
 .price-box .special-price { display: inline-block; margin: 0;}
 .price-box .old-price { display: inline-block; margin:0;}
 .price-box .price { font-weight:normal; color:#c76200; }
@@ -4767,7 +4772,8 @@ ul.tabs li.active{
     .category-products .products-grid { margin: 40px 0 0; padding: 0;}
     .category-products .products-grid .item-inner:hover .ratings { display: block; width: 100%; float: left;}
     .products-grid .actions .add-to-links { margin: 6px 0 0;}
-    .add-to-links li { margin: 0 0 5px 0; text-align: left;}
+    .add-to-links li { margin: 0 0 5px 0; text-align: center;}
+
     .custom-block .custom-block-content,.custom-block .custom-block-text { background: #F1F1F1;}
     .pt_custommenu div.pt_menu .parentMenu a, .pt_custommenu div.pt_menu .parentMenu span.block-title { font-size: 12px;}
     .category-products .products-grid .item-inner .item-box-hover { padding: 0;}

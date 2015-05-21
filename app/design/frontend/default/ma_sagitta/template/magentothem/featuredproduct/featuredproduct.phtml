@@ -55,7 +55,7 @@
 						<div class="actions">
 							<?php if ($this->getConfig('addtocart')) { ?>
 										<?php if($_product->isSaleable()): ?>
-											<button type="button" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('+ Add to Cart') ?></span></span></button>
+											<button type="button" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo "+ ".$this->__('Add to Cart') ?></span></span></button>
 										<?php else: ?>
 											<p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
 										<?php endif; ?>
@@ -64,12 +64,12 @@
 										<ul class="add-to-links">
 											<?php if( $this->getConfig('addtowishlist')){?>
 											<?php if ($this->helper('wishlist')->isAllow()) : ?>
-												<li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><?php echo $this->__('+ Wishlist') ?></a></li>
+												<li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><?php echo "+ ".$this->__('Wishlist') ?></a></li>
 											<?php endif; ?>
 											<?php } ?>
 											<?php if( $this->getConfig('addtocompare') ){?>
 											<?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
-												<li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('+ Compare') ?></a></li>
+												<li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo "+ ".$this->__('Compare') ?></a></li>
 											<?php endif; ?>
 											<?php }?>
 										</ul>
