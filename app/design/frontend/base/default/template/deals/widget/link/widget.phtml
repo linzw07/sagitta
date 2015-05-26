@@ -20,7 +20,7 @@ if ($_items->getItems()) :
     <div style="border: <?php echo $this->getData('border_size') . 'px ' . $this->getData('border_style') . ' ' . $this->getData('border_color') ?>"
         class="block block-list deals-widget">
         <div class="block-title" id="deals-sidebar-title">
-            <strong><span><a href="<?php echo $this->getUrl('dailydeals')?>"><?php echo Mage::helper('dailydeals')->getWidgetTitle(); ?></a> </span></strong>
+            <strong><span><a href="<?php echo $this->getUrl('dailydeals')?>"><?php echo $this->__(Mage::helper('dailydeals')->getWidgetTitle()); ?></a> </span></strong>
         </div>
         <div class="block-content">
             <ol class="mini-products-list deals-side-bar" id="deals-side-bar">

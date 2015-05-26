@@ -37,7 +37,7 @@
 			}
 		?>
 		<?php if($this->getConfig('title')){?>
-			<div class="ma-bestseller-vertscroller-title"><h2><?php echo $this->getConfig('title')?></h2></div>
+			<div class="ma-bestseller-vertscroller-title"><h2><?php echo $this->__($this->getConfig('title'))?></h2></div>
 		<?php }?>
 		<?php if(!$_productCollection->count()): ?> <!-- start if exist product -->
 			<div class="ma-bestseller-vertscoller-content">			

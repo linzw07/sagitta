@@ -15,3 +15,11 @@
 	.catlist_level_top img {
 		width: 100%;
 	}
+	.widget .widget-title h2 {
+ color: #777777;
+  font-family: 'titilliumwebsemibold';
+  font-size: 20px;
+  margin: 0;
+  padding: 0 0 15px;
+  text-transform: uppercase;
+}
