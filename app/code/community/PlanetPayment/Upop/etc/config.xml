@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ /**
+ * One Pica
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to codemaster@onepica.com so we can send you a copy immediately.
+ * 
+ * @category    PlanetPayment
+ * @package     PlanetPayment_Upop
+ * @copyright   Copyright (c) 2012 Planet Payment Inc. (http://www.planetpayment.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/**
+* Planet Payment
+*
+* @category   PlanetPayment
+* @package    PlanetPayment_Upop
+* @author     One Pica Codemaster <codemaster@onepica.com>
+*/
+-->
+<config>
+    <modules>
+        <PlanetPayment_Upop>
+            <version>1.0.18</version>
+        </PlanetPayment_Upop>
+    </modules>
+    <global>
+        <currency>
+            <import>
+                <services>
+                    <upop>
+                        <name>Planet Payment</name>
+                        <model>upop/currency_import_upop</model>
+                    </upop>
+                </services>
+            </import>
+        </currency>
+        <models>
+            <upop>
+                <class>PlanetPayment_Upop_Model</class>
+                <resourceModel>upop_resource</resourceModel>
+            </upop>
+            <checkout>
+                <rewrite>
+                    <type_onepage>PlanetPayment_Upop_Model_Type_Onepage</type_onepage>
+                </rewrite>
+            </checkout>
+            <upop_resource>
+                <class>PlanetPayment_Upop_Model_Resource</class>
+                <entities>
+                    <currencyCodes>
+                        <table>upop_currency_codes</table>
+                    </currencyCodes>
+                    <log>
+                        <table>upop_log</table>
+                    </log>
+                </entities>
+            </upop_resource>
+        </models>
+        <blocks>
+            <upop>
+                <class>PlanetPayment_Upop_Block</class>
+            </upop>
+            <checkout>
+                <rewrite>
+                    <cart_totals>PlanetPayment_Upop_Block_Checkout_Cart_Totals</cart_totals>
+                    <onepage>PlanetPayment_Upop_Block_Onepage</onepage>
+                </rewrite>
+            </checkout>
+            <sales>
+                <rewrite>
+                    <order_totals>PlanetPayment_Upop_Block_Sales_Order_Totals</order_totals>
+                </rewrite>
+            </sales>
+        </blocks>
+        <helpers>
+            <upop>
+                <class>PlanetPayment_Upop_Helper</class>
+            </upop>
+        </helpers>
+        <rewrite>
+            <upop_onepage>
+                <from><![CDATA[#^/checkout/onepage/#]]></from>
+                <to>/upop/onepage/</to>
+            </upop_onepage>
+        </rewrite>
+        <resources>
+            <upop_setup>
+                <setup>
+                    <module>PlanetPayment_Upop</module>
+                    <class>Mage_Customer_Model_Entity_Setup</class>
+                </setup>
+            </upop_setup>
+        </resources>
+        <fieldsets>
+            <sales_convert_quote_payment>
+                <upop_currency_code>
+                    <to_order_payment>*</to_order_payment>
+                </upop_currency_code>
+                <upop_order_number>
+                    <to_order_payment>*</to_order_payment>
+                </upop_order_number>
+                <is_visible>
+                    <to_order_payment>*</to_order_payment>
+                </is_visible>
+                <upop_exchange_rate>
+                    <to_order_payment>*</to_order_payment>
+                </upop_exchange_rate>
+            </sales_convert_quote_payment>
+        </fieldsets>
+        <events>
+            <sales_order_place_before>
+                <observers>
+                    <upop_order_payment_place_after>
+                        <class>upop/observer_checkout</class>
+                        <method>placeOrderAfter</method>
+                        <type>singleton</type>
+                    </upop_order_payment_place_after>
+                </observers>
+            </sales_order_place_before>
+            
+            <!--<core_block_abstract_to_html_before>
+                <observers>
+                    <upop_dbt_status_button>
+                        <class>PlanetPayment_Upop_Model_Observer</class>
+                        <method>addDbtStatusButton</method>
+                        <type>model</type>
+                    </upop_dbt_status_button>
+                </observers>
+            </core_block_abstract_to_html_before> -->
+        </events>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <upop>
+                    <file>upop.xml</file>
+                </upop>
+            </updates>
+        </layout>
+        <routers>
+            <upop>
+                <use>standard</use>
+                <args>
+                    <module>PlanetPayment_Upop</module>
+                    <frontName>upop</frontName>
+                </args>
+            </upop>
+        </routers>
+        <translate>
+            <modules>
+                <PlanetPayment_Upop>
+                    <files>
+                        <default>PlanetPayment_Upop.csv</default>
+                    </files>
+                </PlanetPayment_Upop>
+            </modules>
+        </translate>
+        <secure_url>
+            <uspslabel_order>/upop/customer/</uspslabel_order>
+        </secure_url>
+    </frontend>
+    <crontab>
+        <jobs>
+            <upop_log_clean>
+                <schedule>
+                    <cron_expr>*/5 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>upop/observer_log::cleanLog</model>
+                </run>
+            </upop_log_clean>
+        </jobs>
+    </crontab>	
+    <admin>
+        <routers>
+            <upopadmin>
+                <use>admin</use>
+                <args>
+                    <module>PlanetPayment_Upop</module>
+                    <frontName>upopadmin</frontName>
+                </args>
+            </upopadmin>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <upop>
+                    <file>upop.xml</file>
+                </upop>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <PlanetPayment_Upop>
+                    <files>
+                        <default>PlanetPayment_Upop.csv</default>
+                    </files>
+                </PlanetPayment_Upop>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <upop>
+                <active>1</active>
+                <model>upop/upop</model>
+                <title>Credit Card (Planet Payment UPOP)</title>
+                <payment_action>authorize</payment_action>
+                <order_status>processing</order_status>
+                <currency>USD</currency>
+                <accepted_currencies>USD</accepted_currencies>
+                <service>pyc</service>
+                <cctypes>AE,VI,MC,DI,DIN,JCB</cctypes>
+                <tokenize>0</tokenize>
+                <logging>1</logging>
+                <validation_mode>none</validation_mode>
+                <debug>0</debug>                
+            </upop>
+        </payment>
+        <planet_payment>
+            <upop_general>
+                <url>production</url>
+                <encryption>0</encryption>
+            </upop_general>
+            <upop_logging>
+                <mode>1</mode>
+                <lifetime>14</lifetime>
+            </upop_logging>
+        </planet_payment>
+        <currency>
+            <upop>
+                <logging>1</logging>
+            </upop>
+        </currency>
+    </default>
+</config>
