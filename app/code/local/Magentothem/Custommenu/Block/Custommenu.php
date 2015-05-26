@@ -329,6 +329,7 @@ class Magentothem_Custommenu_Block_Custommenu extends Mage_Catalog_Block_Navigat
         $html[] = '<div class="parentMenu">';
 //        $html[] = '<a href="#">';
         $name = $block->getTitle();
+        $name = $this->__($name);
         $name = str_replace(' ', '&nbsp;', $name);
         $html[] = '<span class="block-title">' . $name . '</span>';
 //        $html[] = '</a>';
