@@ -1746,7 +1746,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 
 
 /* Sidebar =============================================================================== */
-.block { border:0; margin:0 0 30px; background:none; padding: 0; display: inline-block; float: left; }
+.block { border:0; margin:0 0 30px; background:none; padding: 0; display: inline-block; float: left; width:100%;}
 .block .block-title {
     background: url("../images/bg-bottom1-title.png") repeat-x scroll left bottom ;
     float: left;
@@ -2889,7 +2889,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+/*    white-space: nowrap;*/
 }
 .product-name a { color:#777; font-family: 'titilliumwebregular'; font-size:14px; text-transform:capitalize; }
 .product-name a:hover { color: #f4ca49; text-decoration: none;}
@@ -4232,7 +4232,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     text-transform: uppercase;
 }
 .ma-featured-products .featured-products { float: left; margin:0; width: 100%;}
-.ma-featured-products .products-grid .item { margin: 20px 0 0;}
+.ma-featured-products .products-grid .item { margin: 20px 0 0;width:100%;}
 .ma-featured-products .price-box { width: 100%;}
 /*======================================================================================*/
 /*banner-left=============================================================*/
