@@ -33,7 +33,7 @@ if ($_items->getItems()) :
                                 <a href="<?php echo $_item->getProductUrl() ?>"
                                    title="<?php echo $this->escapeHtml($_item->getName()) ?>"><span class="product-image"><img
                                         src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(50) ?>"
-                                        width="50" height="50"
+                                        width="115" height="50"
                                         alt="<?php echo $this->escapeHtml($_item->getName()) ?>"/></span></a>
 
                                 <div class="product-details">
@@ -44,7 +44,7 @@ if ($_items->getItems()) :
                                     <div id="widget-price">
                                         <?php echo $this->getPriceHtml($_item, true) ?>
                                     </div>
-                                    <?php if ($_item->getDealQty()): ?>
+                         <!--            <?php if ($_item->getDealQty()): ?>
                                         <p class="special-price deal-qty">
                                             <span class="price-label"><?php echo $this->__('Deal Qty: '); ?></span>
                                             <span class="price"><?php echo $_item->getDealQty(); ?></span>
@@ -60,7 +60,7 @@ if ($_items->getItems()) :
                                                 onclick="setLocation('<?php echo $this->helper('catalog/product_compare')->getAddToCartUrl($_item) ?>', true)">
                                             <span><span><?php echo $this->__('Add to Cart') ?></span></span>
                                         </button>
-                                    <?php endif; ?>
+                                    <?php endif; ?> -->
                                 </div>
 <!--                                <div style="margin-top: 20px; margin-bottom: 5px;" class="countdown---><?php ///*echo $parentBlockName . '-' . $_item->getId(); */?><!--">-->
                                 <div style="margin-top: 20px; margin-bottom: 5px;" class="countdown-">

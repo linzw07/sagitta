@@ -1744,7 +1744,6 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 	background: url(../images/menu_up.png) no-repeat 50% 50%;
 }
 
-
 /* Sidebar =============================================================================== */
 .block { border:0; margin:0 0 30px; background:none; padding: 0; display: inline-block; float: left; width:100%;}
 .block .block-title {
