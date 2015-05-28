@@ -722,7 +722,8 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 #shopping-cart-table .odd { background: #fff; }
 #shopping-cart-table .even { background: #fff; }
 #shopping-cart-table .product-name { text-align: center; line-height: 120px;}
-#shopping-cart-table td { line-height: 120px;}
+#shopping-cart-table td { height: 120px;}
+#shopping-cart-table td a{ line-height: 120px;}
 #shopping-cart-table .btn-remove2 { display:block; width:17px; height:22px; margin: 48px 0 0; font-size:0; line-height:0; background:url(../images/btn_trash.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
 #shopping-cart-table .link-wishlist { margin: 0 0 0 23px;}
 #shopping-cart-table .item-options { text-align: center; line-height: 0;}
@@ -2349,7 +2350,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 
 /********** < Product Prices */
 .price { white-space:nowrap !important; }
-
+#shopping-cart-table td span.price{ line-height: 120px !important}
 .price-box { margin:5px 0; /*float: left;*/ display: inline-block; }
 .price-box .special-price { display: inline-block; margin: 0;}
 .price-box .old-price { display: inline-block; margin:0;}
@@ -3044,6 +3045,12 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 .cart  input.input-text {
     background: #fff;
     height: 25px;
+    line-height: 25px;
+    width: 254px;
+}
+#shopping-cart-table input.input-text {
+    background: #fff;
+    margin-top:48px;
     line-height: 25px;
     width: 254px;
 }
