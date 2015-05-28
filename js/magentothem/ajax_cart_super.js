@@ -72,6 +72,7 @@ function AddToCartOnProductView() {
         productAddToCartForm.submit = function(button,url){
             if(this.validator && this.validator.validate()){
                 var form = this.form;
+                console.log(form);
                 var oldUrl = form.action;
                 if (url) {
                     form.action = url;
@@ -96,14 +97,12 @@ function AddToCartOnProductView() {
                     var file = fileInput[0].files[0];
                 }
                 
-                if(!file) {
-                    ajaxToCart(url,data,'view');
-                } else {
+                // if(!file) {
+                //     ajaxToCart(url,data,'view');
+                // } else {
                     //$jq('#product_addtocart_form').attr('target', '_blank')
                     form.submit();
-                }
-
-                
+              //  }
                 //End ajax code
                 this.form.action = oldUrl;
                 if (e) {
