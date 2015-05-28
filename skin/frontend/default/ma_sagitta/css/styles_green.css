@@ -45,7 +45,6 @@
   font-family: 'titilliumwebbold';
   src: url('../fonts/titilliumweb-semibold.eot');
   src: url('../fonts/titilliumweb-semibold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/titilliumweb-semibold.woff') format('woff'),
        url('../fonts/titilliumweb-semibold.ttf') format('truetype'),
        url('../fonts/titilliumweb-semibold.svg#titilliumweb-semibold') format('svg');
 }
@@ -62,7 +61,6 @@
     font-family: 'titilliumwebsemibold';
     src: url('../fonts/titilliumweb-semibold.eot');
     src: url('../fonts/titilliumweb-semibold.eot') format('embedded-opentype'),
-         url('../fonts/titilliumweb-semibold.woff') format('woff'),
          url('../fonts/titilliumweb-semibold.ttf') format('truetype'),
          url('../fonts/titilliumweb-semibold.svg#titilliumwebsemibold') format('svg');
 }
