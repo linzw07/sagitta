@@ -303,7 +303,7 @@ button.button span span {
     border: 0 none;
     color: #777;
     font-family: 'titilliumwebsemibold';
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     padding:0;
     text-transform: uppercase;
@@ -1787,8 +1787,8 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 .block-verticalmenu { margin: 13px 0 30px}
 .block li.odd {  }
 .block li.even { background:none; }
-.block .product-name a {font-size: 17px;}
-.block .regular-price .price,.block .special-price .price {font-size: 19px;}
+.block .product-name a {font-size: 12px;}
+.block .regular-price .price,.block .special-price .price {font-size: 14px;}
 .block  .old-price .price,.block  .link-cart { font-size: 14px;}
 .block .price-box { width: 100%; margin: 3px 0 0;}
 .block-subscribe { background: none;}
@@ -2366,7 +2366,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 
 /* Regular price */
 .regular-price { color:#c76200; }
-.regular-price .price { font-size:20px; font-weight: normal; color:#6bb66f; font-family: 'titilliumwebsemibold'; }
+.regular-price .price { font-size:14px; font-weight: normal; color:#6bb66f; font-family: 'titilliumwebsemibold'; }
 .block .regular-price,
 .block .regular-price .price { }
 
@@ -4269,7 +4269,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     padding: 0 0 15px;
     text-transform: uppercase;
 }
-.ma-bestseller-vertscoller-content .box-bestseller { margin-left: 110px;}
+.ma-bestseller-vertscoller-content .box-bestseller { /*margin-left: 110px;*/ width:120px;}
 .ma-bestseller-vertscoller-content .price-box { width: 100%; margin: 0 0 5px 0;}
 .ma-bestseller-vertscoller-content {float: left; margin:20px 0 0; width: 100%;}
 
@@ -4726,7 +4726,7 @@ ul.tabs li.active{
 .ma-onsaleproductslider-container  .bx-wrapper .bx-pager.bx-default-pager a.active {
 	background: #f4ca49;
 }
-.ma-onsaleproductslider-container .product-name a { font-size: 18px;}
+.ma-onsaleproductslider-container .product-name a { font-size: 14px;}
 .cuttom-link a:hover {
     color: #f4ca49;
 }
