@@ -46,7 +46,16 @@
     <?php endif; ?>
     <h1><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') ?></h1>
 </div>
-
+<div>
+<?php $childrencategories = Mage::getModel('catalog/category')->getCategories( $_category->getId());
+foreach ($childrencategories as $category) {  
+ ?>
+ <?php  $childCategory =  Mage::getModel("catalog/category")->load($category->getId());?>
+<a href="<?php echo $childCategory ->getUrl(); ?>">
+<?php echo $category->getName().'('.$childCategory->getProductCount().')    '; ?>
+</a>
+<?php } ?>
+</div>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 
 <?php if($_imgUrl): ?>
