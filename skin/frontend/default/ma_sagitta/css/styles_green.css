@@ -505,7 +505,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 /* BreadCrumbs */
 .breadcrumbs { font-size:14px; color: #777777; line-height:25px; padding:12px 20px; border: 1px solid #f1f1f1; background:#f1f1f1; margin:0 0 25px; }
 .breadcrumbs li { display:inline; }
-.breadcrumbs li strong { font-weight:normal; color: #f4ca49; font-family: 'titilliumwebregular'; font-size: 14px;}
+.breadcrumbs li strong { font-weight:normal; color: #000; font-family: 'titilliumwebregular'; font-size: 16px;}
 .breadcrumbs span{
     background: url("../images/bg-breadcrumbs.png") no-repeat scroll center center;
     display: inline-block;
