@@ -51,8 +51,8 @@
 foreach ($childrencategories as $category) {  
  ?>
  <?php  $childCategory =  Mage::getModel("catalog/category")->load($category->getId());?>
-<a href="<?php echo $childCategory ->getUrl(); ?>">
-<?php echo $category->getName().'('.$childCategory->getProductCount().')    '; ?>
+<a href="<?php echo $childCategory->getUrl(); ?>">
+<?php echo $category->getName(); ?> &nbsp;&nbsp;
 </a>
 <?php } ?>
 </div>
