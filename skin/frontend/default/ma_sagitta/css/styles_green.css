@@ -303,7 +303,7 @@ button.button span span {
     border: 0 none;
     color: #777;
     font-family: 'titilliumwebsemibold';
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     padding:0;
     text-transform: uppercase;
@@ -915,7 +915,7 @@ li { list-style: none;}
 p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inline-block; width: 100%; color: #fff; }
 .top-link ul.links { text-align: right;}
 .top-link ul.links li { padding: 0 5px; line-height: 25px;}
-.top-link ul.links li a {  padding: 13px 8px; color: #ffffff; display: inline-block; border-bottom: 4px solid #333333; font-weight: normal; text-transform: capitalize; font-size: 14px; background: #333333; line-height: 21px;}
+.top-link ul.links li a {  padding: 13px 0px; color: #ffffff; display: inline-block; border-bottom: 4px solid #333333; font-weight: normal; text-transform: capitalize; font-size: 14px; background: #333333; line-height: 21px;}
 .top-link ul.links li a:hover {  background: url("../images/bg-lang.png") repeat; border-bottom: 4px solid #f4ca49; }
 .link-mobile {
     display:none;
@@ -1754,7 +1754,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     background: url("../images/bg-bottom-title-green.png") no-repeat scroll left bottom;
     color: #777777;
     font-family: 'titilliumwebsemibold';
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
     padding: 0 0 15px;
     display: inline-block;
@@ -1762,6 +1762,14 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 }
 .block-compare .block-title strong {
     background: url("../images/bg-bottom-title.png") no-repeat scroll left bottom;
+}
+.ma-newproductslider-container .ma-newproductslider-title h2 {
+  color: #777777;
+  font-family: 'titilliumwebsemibold';
+  font-size: 18px;
+  margin: 0;
+  padding: 0 0 15px;
+  text-transform: uppercase;
 }
 .block .block-title strong span {}
 .block .block-title a { text-decoration:none !important; }
@@ -2369,7 +2377,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 /* Special price */
 .special-price { margin:0; padding:3px 0; }
 .special-price .price-label { font-size:13px; font-weight:normal; white-space:nowrap; color:#cd5033; display: none;}
-.special-price .price { font-size:20px; font-weight: normal; color:#6bb66f; font-family: 'titilliumwebsemibold'; }
+.special-price .price { font-size:16px; font-weight: normal; color:#6bb66f; font-family: 'titilliumwebsemibold'; }
 
 /* Minimal price (as low as) */
 .minimal-price { margin:0; }
@@ -4068,7 +4076,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     background: url("../images/bg-bottom-title-green.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
     color: #777777;
     font-family: 'titilliumwebsemibold';
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
     padding: 0 0 15px;
     text-transform: uppercase;
@@ -4230,7 +4238,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     background: url("../images/bg2-bottom-title.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
     color: #777777;
     font-family: 'titilliumwebsemibold';
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
     padding: 0 0 15px;
     text-transform: uppercase;
@@ -4256,7 +4264,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     background: url("../images/bg2-bottom-title.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
     color: #777777;
     font-family: 'titilliumwebsemibold';
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
     padding: 0 0 15px;
     text-transform: uppercase;
@@ -4276,7 +4284,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     background: url("../images/bg-bottom-title.png") no-repeat scroll left bottom;
     color: #777777;
     font-family: 'titilliumwebsemibold';
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
     padding: 0 0 15px;
     text-transform: uppercase;
@@ -4288,7 +4296,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
 /*categorytab-slider======================================================================*/
 .categorytab-slider { margin: 38px 0 0;}
 .tab-title h2 {
-    font-size: 20px;
+    font-size: 18px;
     color: #777;
     font-family: 'titilliumwebsemibold';
     text-transform: uppercase;
@@ -4319,7 +4327,7 @@ p.welcome-msg { margin: 0; line-height: 50px; text-align: center; display: inlin
     white-space: nowrap;
 }
 .tab_container .products-grid .price-box { float: none; display: inline-block; width: 100%; margin:0;}
-.tab_container .products-grid .regular-price .price { color: #6bb66f; font-size: 20px;}
+.tab_container .products-grid .regular-price .price { color: #6bb66f; font-size: 16px;}
 .tab_container .products-grid .item-inner .actions { margin: 3px 0 0; float: none; display: inline-block; text-align: left; }
 /*==================================================================================*/
 /*--------------------------------------------------------------------*/
@@ -4779,7 +4787,7 @@ ul.tabs li.active{
     .add-to-links li { margin: 0 0 5px 0; text-align: center;}
 
     .custom-block .custom-block-content,.custom-block .custom-block-text { background: #F1F1F1;}
-    .pt_custommenu div.pt_menu .parentMenu a, .pt_custommenu div.pt_menu .parentMenu span.block-title { font-size: 12px;}
+    .pt_custommenu div.pt_menu .parentMenu a, .pt_custommenu div.pt_menu .parentMenu span.block-title { font-size: 16px;}
     .category-products .products-grid .item-inner .item-box-hover { padding: 0;}
     .custom-block { margin: 0;}
     .tab_container .products-grid .product-image { width: 80px;}
